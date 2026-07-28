@@ -1,2 +1,18 @@
 # python-attendancechecker-project
 Check weather students are eligible to sit for the exam
+student_name=input("Enter student name:")
+total_classes=int(input("Enter total classes held"))
+classes_attended=int(input("Enter total classes attended"))
+if total_classes <=0:
+  print("Error: Total classes must be greater than 0.")
+elif classes_attended <0 or classes_attended > total_classes:
+  print("Error: Classes attended must be between 0 and total classess.")
+else:
+  attendance_per= (classes_attended / total_classes) * 100
+  print("\n Attendance")
+  print("Student Name:",student_name)
+  print("Attendace percentage:",attendance_per)
+  if attendace_per >=75:
+    print("status: allowed for exam")
+  else:
+    print ("status: Not allowed for exam")
